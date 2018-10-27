@@ -1,4 +1,4 @@
-const { ViberBot } = require('bottender');
+const { ViberBot, ViberHandler } = require('bottender');
 const { createServer } = require('bottender/express');
 
 const config = require('./bottender.config').viber;

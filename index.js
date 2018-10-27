@@ -7,11 +7,27 @@ const bot = new ViberBot({
   accessToken: config.accessToken,
 });
 
-bot.onEvent(async context => {
-  if (context.event.isMessage) {
-    await context.sendText('Hello World');
-  }
-});
+const handler = new ViberHandler()
+    .onDelivered(() => {
+        console.log('delivered');
+    })
+    .onSeen(() => {
+        console.log('seen');
+    })
+    .onFailed(() => {
+        console.log('failed');
+    })
+    .onText(/yo/i, async context => {
+        await context.sendText('Hi there!');
+    })
+    .onEvent(async context => {
+        await context.sendText("I don't know what you say.");
+    })
+    .onError(async context => {
+        await context.sendText('Something wrong happened.');
+    });
+
+bot.onEvent(handler);
 
 const server = createServer(bot);
 

@@ -1,12 +1,16 @@
 {
   "dependencies": {
-    "bottender": "latest"
+    "bottender": "latest",
+    "sequelize": "^4.41.0",
+    "pg": "^7.6.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "jasmine-node": "^1.16.2"
   },
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "jasmine-test": "jasmine-node spec/"
   }
 }

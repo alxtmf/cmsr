@@ -1,5 +1,6 @@
 CREATE SCHEMA if not exists main
-  AUTHORIZATION postgres;
+  --AUTHORIZATION postgres;
+;
 
 create table if not exists main.cls_base_classifier
 (

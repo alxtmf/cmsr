@@ -24,6 +24,7 @@ const handler = new ViberHandler()
         try {
             //await context.sendText("I don't know what you say.");
             await context.sendText("Выберите действие", {
+                type:"text",
                 keyboard: {
                     DefaultHeight: true,
                     BgColor: '#FFFFFF',

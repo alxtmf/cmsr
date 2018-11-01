@@ -6,11 +6,12 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
-    "jasmine-node": "^1.16.2"
+    "jasmine": "^3.3.0"
   },
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "jasmine-test": "jasmine-node spec/"
+    "jasmine-init": "jasmine init",
+    "jasmine-test": "jasmine"
   }
 }

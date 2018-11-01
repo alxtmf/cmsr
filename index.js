@@ -21,25 +21,30 @@ const handler = new ViberHandler()
         await context.sendText('Hi there!');
     })
     .onEvent(async context => {
-        //await context.sendText("I don't know what you say.");
-        await context.sendText("Выберите действие", {
-            keyboard: {
-                DefaultHeight: true,
-                BgColor: '#FFFFFF',
-                Buttons: [
-                    {
-                        Columns: 1,
-                        Rows: 1,
-                        BgColor: '#2db9b9',
-                        Text: 'Узнать задолженность',
-                        TextVAlign: 'middle',
-                        TextHAlign: 'center',
-                        TextOpacity: 60,
-                        TextSize: 'regular',
-                    },
-                ],
-            },
-        })
+        try {
+            //await context.sendText("I don't know what you say.");
+            await context.sendText("Выберите действие", {
+                keyboard: {
+                    DefaultHeight: true,
+                    BgColor: '#FFFFFF',
+                    Buttons: [
+                        {
+                            Columns: 1,
+                            Rows: 1,
+                            BgColor: '#2db9b9',
+                            Text: 'Узнать задолженность',
+                            TextVAlign: 'middle',
+                            TextHAlign: 'center',
+                            TextOpacity: 60,
+                            TextSize: 'regular',
+                        },
+                    ],
+                },
+            })
+        } catch (e) {
+            console.log(e);
+        }
+
     })
     .onError(async context => {
         await context.sendText('Something wrong happened.');

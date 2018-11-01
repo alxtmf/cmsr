@@ -34,6 +34,8 @@ const handler = new ViberHandler()
                             Rows: 1,
                             BgColor: '#2db9b9',
                             Text: 'Узнать задолженность',
+                            ActionType:"reply",
+                            ActionBody:"reply to me",
                             TextVAlign: 'middle',
                             TextHAlign: 'center',
                             TextOpacity: 60,
